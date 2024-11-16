@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6f2;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            color: white;
+            font-size: 4em;
+            text-shadow: 4px 4px 6px #ff66b2;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: pink;
+            transform: rotate(-45deg);
+            animation: float 4s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: pink;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 25px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Generate multiple hearts with random positions and delays */
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 25%; animation-delay: 1s; animation-duration: 3.5s; }
+        .heart:nth-child(3) { left: 40%; animation-delay: 2s; animation-duration: 3s; }
+        .heart:nth-child(4) { left: 60%; animation-delay: 3s; animation-duration: 4.5s; }
+        .heart:nth-child(5) { left: 75%; animation-delay: 4s; animation-duration: 3.7s; }
+        .heart:nth-child(6) { left: 90%; animation-delay: 5s; animation-duration: 3.9s; }
+    </style>
+</head>
+<body>
+    <h1>I love youu Maram &lt;3</h1>
+    <!-- Adding animated hearts -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+</body>
+</html>
